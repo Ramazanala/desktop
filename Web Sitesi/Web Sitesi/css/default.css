@@ -1,0 +1,21 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'poppins',sans-serif;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    background-color: #efefef;
+}
+img , video{
+    width: 100%;
+}
+a,a:link, a::before,a::after{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
