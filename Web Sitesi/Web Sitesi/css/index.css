@@ -286,7 +286,7 @@
 }
 /* Yetkinlik baslangic*/
 .yetkinlik {
-    background-color: rgba(252, 149, 14, 0.944);
+    background-color: #11a372;
 }
 .col-md-3 .img-fluid {
     border-radius: 80%;
@@ -396,7 +396,7 @@ main.row {
 .pr {
     margin-top: 20px;
     clear: left;
-    margin: 20px;
+    margin: 40px;
     font-size: 18px;
     font-family: Helvetica;
 }
@@ -408,19 +408,34 @@ main.row {
 }
 .head1 {
     color: #11a372;
-    margin: 40px;
+    margin: 20px 60px;
     font-family: Helvetica;
     font-size: 50px;
 }
 .head2 {
     color: #11a372;
-    margin: 25px;
+    margin: 40px;
     font-family: fantasy;
 }
 
 /* Mirasimiz baslangıc*/
 
 .img4 {
-    margin: 10px 50px;
+    margin: 0px 100px;
     width: 700px;
+    height: 500px;
+}
+.img5 {
+    float: left;
+    margin: 10px 50px;
+    width: 400px;
+    height: 300px;
+}
+
+/* iletisim baslangic*/
+
+.iletisim {
+}
+
+.rad {
 }
