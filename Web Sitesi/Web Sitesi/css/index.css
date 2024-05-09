@@ -137,7 +137,7 @@
     border-radius: 50%;
 }
 .sol-kolon img:hover {
-    box-shadow: 0px 10px 30px darkorange;
+    box-shadow: 0 0 30px #11a372;
 }
 
 .sag-kolon {
@@ -434,8 +434,52 @@ main.row {
 
 /* iletisim baslangic*/
 
-.iletisim {
+.box-container {
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: wrap;
+}
+.box {
+    width: 369px;
+    padding: 15px;
+    min-height: 430px;
 }
 
-.rad {
+.kutu1 {
+    background-color: #11a372;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.kutu2 {
+    background-color: #11a372;
+}
+
+.kutu3 {
+    background-color: #11a372;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.icerik {
+    padding: 10px;
+}
+
+.kutu1 h3 {
+    color: white;
+    text-transform: uppercase;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.kutu3 .btn {
+    margin: 60px 0;
+    padding: 15px 4px;
+    border: 0;
+    border-radius: 5px;
+    outline: none;
+    background-color: white;
+    cursor: pointer;
+    font-weight: 200px;
+    font-size: 15px;
 }

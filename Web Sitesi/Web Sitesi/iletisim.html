@@ -85,118 +85,89 @@
         <!-- Navbar bitis-->
 
         <!--iletisim baslangic-->
-        <div class="coontainer- col-lg-8 mt-4">
-            <div class="card">
-                <div class="row">
-                    <h1 class="text-center">İletisim</h1>
-                    <div class="col-5 ms-5 mt-3 ps-3">
-                        <label>Ad Soyad :</label>
+        <div class="box-container">
+            <div class="box kutu1">
+                <div class="icerik">
+                    <h3>İletişim Bilgilerim</h3>
+                    <p><i class="fa-solid fa-location-dot"></i> Adres :</p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing ntium
+                    </p>
+                    <p><i class="fa-solid fa-location-dot"></i> Adres :</p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing ntium
+                    </p>
+                    <p><i class="fa-solid fa-location-dot"></i> Adres :</p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing ntium
+                    </p>
+                </div>
+            </div>
+            <div class="box kutu2">
+                <div class="icerik">
+                    <label>Ad Soyad :</label>
+                    <input
+                        type="text"
+                        name=""
+                        placeholder="Ad Soyad giriniz"
+                        class="form-control"
+                    />
+                    <label>Adres :</label>
+                    <input
+                        type="text"
+                        name=""
+                        placeholder="Adresinizi giriniz"
+                        class="form-control"
+                    />
+                    <div class="form-check">
                         <input
-                            type="text"
-                            name=""
-                            placeholder="Ad Soyad giriniz"
-                            class="form-control"
+                            class="form-check-input"
+                            type="radio"
+                            name="flexRadioDefault"
+                            id="flexRadioDefault1"
                         />
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            Erkek
+                        </label>
                     </div>
-                    <div class="col-5 mt-3">
-                        <label>Konu :</label>
+                    <div class="form-check">
                         <input
-                            type="text"
-                            name=""
-                            placeholder="baba adi giriniz"
-                            class="form-control"
+                            class="form-check-input"
+                            type="radio"
+                            name="flexRadioDefault"
+                            id="flexRadioDefault2"
+                            checked
                         />
-                    </div>
-                    <div class="col-5 ms-5 mt-3 ps-3">
-                        <label>Email :</label>
-                        <input
-                            type="email"
-                            name=""
-                            placeholder="e-posta adresinizi giriniz"
-                            class="form-control"
-                        />
-                    </div>
-                    <div class="col-5 mt-3">
-                        <label>Adres :</label>
-                        <input
-                            type="text"
-                            name=""
-                            placeholder="Adresinizi giriniz"
-                            class="form-control"
-                        />
-                    </div>
-                    <div class="col-5 ms-5 mt-3 ps-3">
-                        <label>Cinsiyet :</label>
-                        <div class="rad">
-                            <label for="erkek">Erkek</label>
-                            <input
-                                type="radio"
-                                id="erkek"
-                                name="cinsiyet"
-                                value="erkek"
-                                checked
-                            />
-                        </div>
-
-                        <div class="rad">
-                            <label for="kadin">Kadın</label>
-                            <input
-                                type="radio"
-                                id="kadin"
-                                name="cinsiyet"
-                                value="kadin"
-                            />
-                        </div>
-                    </div>
-                    <div class="col-5 mt-3">
-                        <label>Zaman :</label>
-                        <input
-                            type="date"
-                            name=""
-                            placeholder="Zamanı giriniz"
-                            class="form-control"
-                        />
-                    </div>
-                    <div class="col-5 ms-5 mt-3 ps-3">
-                        <label>Ülke :</label>
-                        <select class="form-select">
-                            <option selected>ülkenizi seçin</option>
-                            <option>Türkiye</option>
-                            <option>Rusya</option>
-                            <option>Almanya</option>
-                            <option>İngiltere</option>
-                            <option>Amerika</option>
-                        </select>
-                    </div>
-                    <div class="col-5 mt-3">
-                        <label>S :</label>
-                        <select class="form-select">
-                            <option selected>ülkenizi seçin</option>
-                            <option>Türkiye</option>
-                            <option>Rusya</option>
-                            <option>Almanya</option>
-                            <option>İngiltere</option>
-                            <option>Amerika</option>
-                        </select>
-                    </div>
-                    <div class="col-5 ms-5 mt-3 ps-3 d-flex flex-colum">
-                        <label>Mesajınız :</label>
-                        <textarea
-                            name=""
-                            id="mesaj"
-                            placeholder="Girmek istediğin "
-                            cols="110"
-                            rows="7"
-                        ></textarea>
-                    </div>
-                    <div class="col-5 ms-5 mt-3 ps-3">
-                        <button type="submit" class="form-control">
-                            Gönder
-                        </button>
+                        <label class="form-check-label" for="flexRadioDefault2">
+                            Kadın
+                        </label>
                     </div>
                 </div>
             </div>
+            <div class="box kutu3">
+                <div class="icerik">
+                    <label>Email :</label>
+                    <input
+                        type="email"
+                        name=""
+                        placeholder="e-posta adresinizi giriniz"
+                        class="form-control"
+                    />
+                    <label>Ülke :</label>
+                    <select class="form-select">
+                        <option selected>ülkenizi seçin</option>
+                        <option>Türkiye</option>
+                        <option>Rusya</option>
+                        <option>Almanya</option>
+                        <option>İngiltere</option>
+                        <option>Amerika</option>
+                    </select>
+                    <button type="submit" class="btn">Gönder</button>
+                    <button type="submit" class="btn">temizle</button>
+                </div>
+            </div>
         </div>
+
         <!--iletisim bitis-->
 
         <script
