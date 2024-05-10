@@ -137,7 +137,7 @@
     border-radius: 50%;
 }
 .sol-kolon img:hover {
-    box-shadow: 0px 10px 30px darkorange;
+    box-shadow: 0 0 30px #11a372;
 }
 
 .sag-kolon {
@@ -286,7 +286,7 @@
 }
 /* Yetkinlik baslangic*/
 .yetkinlik {
-    background-color: rgba(252, 149, 14, 0.944);
+    background-color: #11a372;
 }
 .col-md-3 .img-fluid {
     border-radius: 80%;
@@ -396,7 +396,7 @@ main.row {
 .pr {
     margin-top: 20px;
     clear: left;
-    margin: 20px;
+    margin: 40px;
     font-size: 18px;
     font-family: Helvetica;
 }
@@ -408,19 +408,111 @@ main.row {
 }
 .head1 {
     color: #11a372;
-    margin: 40px;
+    margin: 20px 60px;
     font-family: Helvetica;
     font-size: 50px;
 }
 .head2 {
     color: #11a372;
-    margin: 25px;
+    margin: 40px;
     font-family: fantasy;
 }
 
 /* Mirasimiz baslangıc*/
 
 .img4 {
-    margin: 10px 50px;
+    margin: 0px 100px;
     width: 700px;
+    height: 500px;
+}
+.img5 {
+    float: left;
+    margin: 10px 50px;
+    width: 400px;
+    height: 300px;
+}
+
+/* iletisim baslangic*/
+
+.box-container {
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: wrap;
+}
+.box {
+    width: 390px;
+    padding: 15px;
+    min-height: 430px;
+}
+
+.kutu1 {
+    background-color: #11a372;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.kutu2 {
+    background-color: #11a372;
+}
+
+.kutu3 {
+    background-color: #11a372;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.icerik {
+    padding: 10px;
+}
+
+.kutu1 h3 {
+    color: white;
+    text-transform: uppercase;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.kutu3 .btn {
+    margin: 20px 0;
+    padding: 15px 20px;
+    border: 0;
+    border-radius: 5px;
+    outline: none;
+    background-color: white;
+    cursor: pointer;
+    font-weight: 200px;
+    font-size: 15px;
+}
+.kutu1 .icerik p {
+    font-size: 18px;
+}
+
+.kutu1 .icerik p span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.icerik label {
+    padding-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/*iletisim java için*/
+
+.input-control input:focus {
+    outline: 0;
+}
+.input-control.succsess input {
+    border-color: green;
+}
+
+.input-control.error input {
+    border-color: red;
+}
+
+.input-control .error {
+    color: red;
+    font-size: 9px;
+    height: ;
 }
