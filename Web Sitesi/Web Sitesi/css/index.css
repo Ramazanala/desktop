@@ -1,110 +1,6 @@
 @import "./default.css";
 
-/*.sıra{ 
-    float: left;  
-} 
 
-
-.container .sıra .sol-kolon{
-   
-    margin-top: 135px;
-    width: 50px;
-}
-.container .sıra .sol-kolon img{
-    width: 300px;
-    margin-left: 100px;
-    border-radius: 50%;
-}
-
-.container .sıra .sag-kolon{
-    margin-top: 150px ;
-    
-    margin-left: 100px;
-}
-.container .sıra .sag-kolon .baslık{
-    font-size: 60px;
-    font-weight: 600;  
-}
-.container .sıra .sag-kolon .sekme{
-    
-    margin: 20px 0 40px;
-}
-.container .sıra .sag-kolon .sekme .link{
-    margin-right: 50px;
-    font-size: 18px;
-    font-weight: 500;
-    border: 3px solid;
-    padding: 3px 10px;
-    border-radius: 7px;
-    color: black;
-    cursor: pointer;
-
-}
-
-.container .sıra .sag-kolon .sekme a:hover{
-    background-color: orange;
-}*/
-
-/*.link ::after{
-    content: '';
-    width: 0;
-    height: 3px;
-    background: #ff004f;
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    transition: 0.5s;
-}*/
-
-/*
-.container .sıra .sol-kolon{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 4rem;
-    min-height:calc(100vh - 6.5rem);
-
-    
-    flex: 1 1 42rem;
-    text-align: center;
-        img{
-            height: 25rem;
-            width: 25rem;
-            border-radius: 50%
-        }
-    
-}
-
-.container .sıra .sag-kolon{
-        flex: 1 1 20rem;
-        a{
-        border: 3px solid;
-        padding: 3px 10px;
-        border-radius: 7px;
-        color: black;
-        cursor: pointer;
-        }
-        a:hover{
-            background-color: orange;
-        }
-    h1{
-    
-        font-size: 4rem;
-        padding-bottom: .5rem;
-    }
-    span{
-        font-size: 3rem;
-        color: crimson;
-        padding: .5rem 0;
-        display: block;
-    }
-    p{
-        font-size:1.7rem ;
-        color: lightslategrey;
-        padding: 1rem 0;
-        line-height: 2;
-    }
-}*/
 
 /* navbar  */
 .ayrac {
@@ -443,9 +339,9 @@ main.row {
     flex-flow: wrap;
 }
 .box {
-    width: 369px;
+    width: 390px;
     padding: 15px;
-    min-height: 430px;
+    min-height: 500px;
 }
 
 .kutu1 {
@@ -473,8 +369,8 @@ main.row {
         "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 .kutu3 .btn {
-    margin: 60px 0;
-    padding: 15px 4px;
+    margin: 20px 0;
+    padding: 15px 20px;
     border: 0;
     border-radius: 5px;
     outline: none;
@@ -482,4 +378,43 @@ main.row {
     cursor: pointer;
     font-weight: 200px;
     font-size: 15px;
+}
+.kutu1 .icerik p {
+    font-size: 18px;
+}
+
+.kutu1 .icerik p span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.icerik label {
+    padding-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/*iletisim java için*/
+
+.input-control input:focus {
+    outline: 0;
+}
+.input-control.succsess input {
+    border-color: green;
+}
+
+.input-control.error input {
+    border-color: red;
+}
+
+.input-control .error {
+    color: red;
+    font-size: 15px;   
+}
+
+
+/* login icin*/
+
+.container .form-floating {
+    width: 500px ;
 }
