@@ -3,13 +3,13 @@ const ad = document.getElementById('ad');
 const email = document.getElementById('email');
 const adres = document.getElementById('adres');
 const ulke = document.getElementById('ulke');
-const genderRadios = document.getElementsByName('flexRadioDefault');
+
 const textarea = document.getElementById('textarea');
 
-form.addEventListener('click', (e) => {
-    e.preventDefault();
+form.addEventListener('submit', (e) => {
+        e.defaultPrevented();
 
-    ValidateInputs();
+        ValidateInputs();
 });
 
 const setError = (element, message) => {
@@ -39,20 +39,8 @@ const ValidateInputs = () => {
     const adValue = ad.value.trim();
     const emailValue = email.value.trim();
     const adresValue = adres.value.trim();
-   
     const ulkeValue = ulke.value;
     const textareaValue = textarea.value;
- 
-    // Cinsiyet kontrolü
-    let genderSelected = false;
-    genderRadios.forEach(radio => {
-        if (radio.checked) {
-            genderSelected = true;
-        }
-    });
-
- 
-    
 
     if (adValue === '') {
         setError(ad, 'ad alanı boş geçilmez');
@@ -87,12 +75,4 @@ const ValidateInputs = () => {
     } else {
         setSuccess(textarea);
     }
-
-    if (!genderSelected) {
-        setError(genderRadios[0], 'Cinsiyet seçiniz');
-    } else {
-        setSuccess(genderRadios[0]);
-    }
-
-    
 };

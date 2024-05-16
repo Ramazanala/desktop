@@ -17,7 +17,7 @@
             crossorigin="anonymous"
         />
     </head>
-    <body>
+    <body id="girisbody">
         <!-- Navbar baslangic-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
@@ -40,8 +40,8 @@
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item d-flex align-items-center">
                             <a
-                                class="nav-link active"
-                                aria-current="page"
+                                class="nav-link"
+                                
                                 href="anasayfa.html"
                                 >Hakkımızda</a
                             >
@@ -87,22 +87,35 @@
         <!-- Navbar bitis-->
 
         <!--login baslangic-->
-        <div class="container">
-        <div class="form-floating mb-4">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-            <label for="floatingInput">Email address</label>
-          </div>
-          <div class="form-floating">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-            <label for="floatingPassword">Password</label>
-          </div>
-        </div>
+
+        <h1 class="container text-center p-5 ">GİRİŞ YAP</h1>
+        <form id="form" action="giris.php" method="post">
+            <div class="container loginbox">
+                <div class="input-control">
+                    <div class="form-floating mb-4">
+                        <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com">
+                        <label for="email">Email address</label>
+                        <div class="error"></div>
+                    </div>
+                </div>
+                <div class="input-control">
+                    <div class="form-floating mb-4">
+                        <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+                        <label for="password">Password</label>
+                        <div class="error"></div>
+                    </div>
+                </div>
+                <input type="submit" class="btn btn-primary" >
+            </div>
+        </form>
 
         <!--login bitis-->
+        
         <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"
     ></script>
+    <script src="giris.js"></script>
 </body>
 </html>

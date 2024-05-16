@@ -79,7 +79,7 @@
     padding-inline: 30px;
 }
 .sag-kolon .sekme a:hover {
-    background-color: orange;
+    background-color: #11a372;
 }
 .fa-id-card {
     padding-right: 5px;
@@ -128,58 +128,117 @@
         display: none;
     }
 }
-/*Özheçmiş */
+/*Özgeçmiş */
 
-.hakkimda {
-    .baslik {
-        text-align: center;
-        font-size: 3.5rem;
-        margin: 30px 10px 40px;
-        span {
-            color: orange;
-        }
-    }
-    .row {
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 2rem;
-        margin-left: 1rem;
-        margin-bottom: 1.5rem;
-
-        .bilgilerim {
-            flex: 1 1 42rem;
-            h1 {
-                font-size: 2.5rem;
-                color: crimson;
-                text-transform: uppercase;
-                padding-bottom: 1rem;
-            }
-            .kutuici {
-                padding: 1.5rem 0;
-                display: flex;
-                flex-wrap: wrap;
-                gap: 2rem;
-
-                .kutu {
-                    flex: 1 1 20rem;
-
-                    h3 {
-                        font-size: 1.4rem;
-                        color: crimson;
-                        padding: 1rem 0;
-                        font-weight: normal;
-
-                        span {
-                            color: orange;
-                            font-weight: lighter;
-                        }
-                    }
-                }
-            }
-        }
-    }
+.hakkimda_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 8%;
 }
+.hakkimda_container .hakkimda_icerik{
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    grid-gap: 70px;
+}
+.hakkimda_icerik .imgKisim{
+    position: relative;
+    min-width: 300px;
+    height: 380px;
+}
+.imgKisim img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+}
+
+.hakkimda_icerik .imgKisim::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    outline:  3px solid #11a372;
+    top: 15px;
+    left: 15px;
+    z-index: 1;
+}
+
+.bilgiKisim h1{
+    color: #11a372;
+    font-size: 30px;
+    font-family: Helvetica, sans-serif;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 5px;
+    position: relative;
+}
+.bilgiKisim h1::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: 110%;
+    left: 0;
+    background-color: aliceblue;
+}
+
+.bilgiKisim h1::after{
+    content: '';
+    position: absolute;
+    width: 40%;
+    height: 3px;
+    top:calc(110%-1px);
+    left: 0px;
+    background-color: #ccc;
+}
+
+.bilgiKisim h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 600px;
+    color: #11a372;
+    padding: 14px 0 15px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+.bilgiKisim p{
+    font-size: 18px;
+    line-height: 1.2;
+    text-align: justify;
+    padding-bottom: 8px;
+}
+.kisiselBilgi{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px 20px;
+    margin-bottom: 10px;
+    margin-top: 14px;
+    border-bottom: 1px solid #11a372;
+}
+.kisiselBilgi div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.kisiselBilgi div span{
+    letter-spacing: 1px;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .hakkimda_container .hakkimda_icerik{
+      grid-template-columns: 1fr; 
+    }
+    .hakkimda_icerik .imgKisim{
+      min-width: auto; 
+      height: auto; 
+    }
+  }
+
+
+
 /* Yetkinlik baslangic*/
 .yetkinlik {
     background-color: #11a372;
@@ -314,6 +373,23 @@ main.row {
     font-family: fantasy;
 }
 
+@media only screen and (max-width: 768px) {
+    .resimSlider {
+        height: 350px;
+    }
+
+    .img1, .img2, .img3 {
+      width: 100%; /* Resimlerin genişliğini %100 yap */
+      margin-left: 0; /* Sol boşluğu kaldır */
+      margin-right: 0; /* Sağ boşluğu kaldır */
+      float: none; /* Float özelliğini kaldır */
+    }
+    .pr, .pr2 {
+      margin: 20px; /* Metinlerin kenar boşluklarını ayarla */
+      font-size: 16px; /* Metin boyutunu azalt */
+    }
+  }
+
 /* Mirasimiz baslangıc*/
 
 .img4 {
@@ -327,6 +403,20 @@ main.row {
     width: 400px;
     height: 300px;
 }
+
+@media only screen and (max-width: 768px) {
+    .img4, .img5 {
+      width: 100%; 
+      margin-left: 0; 
+      margin-right: 0; 
+      float: none; 
+    }
+    .pr {
+      margin: 20px; 
+      font-size: 16px; 
+    }
+  }
+
 
 /* iletisim baslangic*/
 
@@ -393,6 +483,9 @@ main.row {
     font-size: 18px;
     font-weight: bold;
 }
+#iletisimbody{
+    background-color: #dffff4;
+}
 
 /*iletisim java için*/
 
@@ -414,7 +507,18 @@ main.row {
 
 
 /* login icin*/
-
-.container .form-floating {
-    width: 500px ;
+#girisbody{
+    background-color: #dffff4;
 }
+
+.container.loginbox {
+    width: 400px ;
+    padding: 40px;
+    margin: auto;
+    margin-top:10px ;
+    border: #11a372 solid ;
+    border-radius: 10px;
+    background-color: #fffffff4;
+}
+
+
