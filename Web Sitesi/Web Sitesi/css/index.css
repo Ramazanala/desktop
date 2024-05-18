@@ -78,6 +78,7 @@
 .sag-kolon .sekme .link2 {
     padding-inline: 30px;
 }
+
 .sag-kolon .sekme a:hover {
     background-color: #11a372;
 }
@@ -86,6 +87,17 @@
 }
 .fa-gamepad {
     padding-right: 5px;
+}
+
+.fa-github{
+    font-size : 30px;
+    color: #11a372;
+    margin-bottom: 10px;
+}
+.fa-instagram{
+    font-size : 30px;
+    color: #11a372;
+    margin-left: 10px;
 }
 
 /* Responsive tasarım için medya sorguları */
@@ -244,13 +256,17 @@
     background-color: #11a372;
 }
 .col-md-3 .img-fluid {
-    border-radius: 80%;
+    border-radius: 60%;
 }
 .col-md-3 .img-fluid:hover {
     box-shadow: 13px 13px 13px rgb(0, 0, 0);
 }
 
 /*Eğitim durumu baslangıc*/
+.baslik5{
+    color: white;
+}
+
 .egitim {
     width: 100%;
     min-height: 100vh;
@@ -522,3 +538,59 @@ main.row {
 }
 
 
+
+@import url("https://fonts.googleapis.com/css?family=Oswald&display-swap");
+
+.film {
+
+width: 100%;
+
+display: flex;
+
+flex-wrap: wrap;
+
+}
+
+.film li {
+
+flex: 1;
+
+display: flex;
+
+flex-direction: column;
+
+align-items: center;
+
+list-style: none;
+
+margin: 10px;
+
+padding: 15px;
+
+border-radius: 12px;
+
+text-align: center;
+
+background:#272727;
+
+}
+.film li img {
+
+max-width: 300px;
+
+border-radius: 12px;
+
+}
+
+.film li h2 {
+
+color: #fff;
+
+font-size: 1.8em;
+
+padding: 15px 10px 0;
+
+margin-top: auto;
+
+font-family: "Oswald", sans-serif;
+}

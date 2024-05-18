@@ -1,5 +1,3 @@
-// vue.js
-
 new Vue({
     el: '#app',
     data: {
@@ -7,8 +5,8 @@ new Vue({
         email: '',
         adres: '',
         ulke: '',
-        textarea: ''
-        
+        textarea: '',
+        cinsiyet: ''
     },
     computed: {
         adIsValid() {
@@ -22,13 +20,16 @@ new Vue({
             return this.adres.trim() !== '';
         },
         ulkeIsValid() {
-            return this.ulke !== '';
+            return this.ulke !== '' && this.ulke !== 'ülkenizi seçin';
         },
         mesajIsValid() {
-            return this.textarea !== '';
+            return this.textarea.trim() !== '';
+        },
+        cinsiyetIsValid() {
+            return this.cinsiyet !== '';
         },
         adError() {
-            return this.adIsValid ? '' : 'Ad soyad boş geçilemez';
+            return this.adIsValid ? '' : 'Ad Soyad boş bırakılamaz';
         },
         emailError() {
             return this.emailIsValid ? '' : 'Geçersiz e-posta adresi';
@@ -40,17 +41,28 @@ new Vue({
             return this.ulkeIsValid ? '' : 'Lütfen ülkenizi seçin';
         },
         textareaError() {
-            return this.textareaIsValid ? '' : 'Mesaj boş bırakılamaz';
+            return this.mesajIsValid ? '' : 'Mesaj boş bırakılamaz';
+        },
+        cinsiyetError() {
+            return this.cinsiyetIsValid ? '' : 'Lütfen cinsiyet seçiniz';
         },
     },
     methods: {
         submitForm() {
-            if (this.adIsValid && this.emailIsValid && this.adresIsValid && this.ulkeIsValid && this.textareaIsValid ) {
-                alert('Form başarıyla gönderildi!');
-                // Burada formu sunucuya gönderebilirsiniz
+            if (this.adIsValid && this.emailIsValid && this.adresIsValid && this.ulkeIsValid && this.mesajIsValid && this.cinsiyetIsValid) {
+                // Formun gönderilmesi için vanilla JS kontrolü
+                document.getElementById("contactForm").submit();
             } else {
                 alert('Lütfen formdaki hataları düzeltin!');
             }
+        },
+        resetForm() {
+            this.ad = '';
+            this.email = '';
+            this.adres = '';
+            this.ulke = '';
+            this.textarea = '';
+            this.cinsiyet = '';
         }
     }
 });

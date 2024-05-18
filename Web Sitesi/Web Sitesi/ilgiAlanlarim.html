@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Ramazan Biyik</title>
-
+        <title>Hobilerim</title>
+        <link rel="icon" type="image/jpg" href="img/favicon2.png">
         <link rel="stylesheet" href="css/index.css" />
         <script
             src="https://kit.fontawesome.com/1a69ec90dc.js"
@@ -17,7 +17,7 @@
             crossorigin="anonymous"
         />
     </head>
-    <body>
+    <body id="ilgibody">
         <!-- Navbar baslangic-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
@@ -90,47 +90,31 @@
             <div class="row">
                 <h4 class="display-4 text-center pb-3">İLgi Alanlarım</h4>
                 <div class="col-md-3">
-                    <img src="img/html.jpeg" class="img-fluid" alt="" />
+                    <img src="img/basketbol.jpeg" class="img-fluid" alt="" />
                     <p class="text-black-100 text-center mt-2">Basketbol</p>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Natus doloribus pariatur non temporibus dolor! Commodi
-                        explicabo, saepe ipsa quaerat corrupti perspiciatis
-                        facere quibusdam dicta doloribus obcaecati architecto.
-                        Quae, blanditiis qui.
+                        Basketbol oyanamayı ve izlemeyi her zaman sevmişimdir.. Milli maçlarını izlemeye fırsat buldukça giderim. Anadolu Efesi destekliyorum. Alperen Şemgün'ü ve Shane Larkini oyununu çok beğeniyorum.ek olarak polislerle takımımız var urfada yaşıyorken her gün maç yapıyorduk. Üniverste basketbol takımına girmek isterim bu sene takım yoktu ama seneye neden olmasın.
                     </p>
                 </div>
                 <div class="col-md-3">
-                    <img src="img/css.jpeg" class="img-fluid" alt="" />
+                    <img src="img/metroExodus.jpeg" class="img-fluid" alt="" />
                     <p class="text-black-100 text-center mt-3">Bilgisayar Oyunları</p>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Natus doloribus pariatur non temporibus dolor! Commodi
-                        explicabo, saepe ipsa quaerat corrupti perspiciatis
-                        facere quibusdam dicta doloribus obcaecati architecto.
-                        Quae, blanditiis qui.
+                       Küçüklüğümden beri online ve hikaye oyunlarını çok seviyorum fırsat buldukça oynarım . Birçok arkadaşı edindim oyunlar sayesinde .Favori oyunlarım Counter Strike, GTA, Rust ,Bannerlord , Call Of Duty serisi, Metro Exadus serisi . 
                     </p>
                 </div>
                 <div class="col-md-3">
-                    <img src="img/c++.jpeg" class="img-fluid" alt="" />
+                    <img src="img/breakingbad.jpeg" class="img-fluid" alt="" />
                     <p class="text-black-100 text-center mt-2">Film/Dizi izlemek</p>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Natus doloribus pariatur non temporibus dolor! Commodi
-                        explicabo, saepe ipsa quaerat corrupti perspiciatis
-                        facere quibusdam dicta doloribus obcaecati architecto.
-                        Quae, blanditiis qui.
+                       Sıklıkla dizi / film izlerim . Bana göre en iyi dizilerin başında Breakin Bad ve Prison Break gelir 
                     </p>
                 </div>
                 <div class="col-md-3">
-                    <img src="img/c.jpeg" class="img-fluid" alt="" />
-                    <p class="text-black-100 text-center mt-2">C#</p>
+                    <img src="img/Voleybol.jpeg" class="img-fluid" alt="" />
+                    <p class="text-black-100 text-center mt-2">Voleybol</p>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Natus doloribus pariatur non temporibus dolor! Commodi
-                        explicabo, saepe ipsa quaerat corrupti perspiciatis
-                        facere quibusdam dicta doloribus obcaecati architecto.
-                        Quae, blanditiis qui.
+                        Lise 4 te girdiğimiz bir okullar arası turnuvada Şanlıurfa 2. si olarak başladığım bir spor dalı oynamyı severim. kardeşlerim maçları takip eder ve beraber oynarız .ülkemizin kadın voleybol takımının şampiyonluklarıyla daha da sevilir hale gelmiştir benim için
                     </p>
                 </div>
             </div>
@@ -138,22 +122,150 @@
         <!--ilgi alanlarim Giris bitis-->
 
         <!--ilgi alanlarim Ana baslangic-->
+        <section id="app">
         <div class="container">
-            <div class="basketbolBox">
+            <div id="basketbol" class="basketbol">
 
+             
             </div>
             <div class="pcBox">
-
+                <div v-if="loading" class="text-center">Veriler yükleniyor...</div>
+            <div v-if="error" class="text-center text-danger">Veriler yüklenirken hata oluştu!</div>
+            <div v-if="game" class="game-info">
+                <h2>{{ game.title }}</h2>
+                <p>{{ game.short_description }}</p>
+                <img :src="game.thumbnail" alt="Game Thumbnail" class="img-fluid">
             </div>
-            <div class="FilmBox">
-
             </div>
-            <div class="seyahatBox">
-
+            
+            <div class="Voleybol">
+                <h3 class="mt-4">Turnuvadan Bazı Görüntüler</h3>
+                <div id="carouselExampleIndicators" class="carousel slide m-5">
+                    <div class="carousel-indicators">
+                        <button
+                            type="button"
+                            data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide-to="0"
+                            class="active"
+                            aria-current="true"
+                            aria-label="Slide 1"
+                        ></button>
+                        <button
+                            type="button"
+                            data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide-to="1"
+                            aria-label="Slide 2"
+                        ></button>
+                        <button
+                            type="button"
+                            data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide-to="2"
+                            aria-label="Slide 3"
+                        ></button>
+                        <button
+                            type="button"
+                            data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide-to="3"
+                            aria-label="Slide 4"
+                        ></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                                <img
+                                    src="img/IMG-20240518-WA0018.jpg"
+                                    class="d-block w-100 resimSlider"
+                                    alt="Ali Kayasi"
+                                />
+                        </div>
+                        <div class="carousel-item">
+                                ><img
+                                    src="img/IMG-20240518-WA0020.jpg"
+                                    class="d-block w-100 resimSlider"
+                                    alt="baskonus"
+                                />
+                        </div>
+                        <div class="carousel-item">
+                                <img
+                                    src="img/IMG-20240518-WA0021.jpg"
+                                    class="d-block w-100 resimSlider"
+                                    alt="Döngel Mağarası"
+                            />
+                        </div>
+                        <div class="carousel-item">
+                                ><img
+                                    src="img/IMG-20240518-WA0022.jpg"
+                                    class="d-block w-100 resimSlider"
+                                    alt="Yedi Kuyular"
+                                />
+                        </div>
+                    </div>
+                    <button
+                        class="carousel-control-prev"
+                        type="button"
+                        data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev"
+                    >
+                        <span
+                            class="carousel-control-prev-icon"
+                            aria-hidden="true"
+                        ></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button
+                        class="carousel-control-next"
+                        type="button"
+                        data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next"
+                    >
+                        <span
+                            class="carousel-control-next-icon"
+                            aria-hidden="true"
+                        ></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <!--Slider bitis-->
+            </div>
+            <div id="film" class="film">
+                
             </div>
         </div>
+        </section>
         <!--ilgi alanlarim Ana bitis-->
-
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+        <script src="api.js"></script>
+        <script>
+            new Vue({
+                el: '#app',
+                data: {
+                    game: null,
+                    loading: true,
+                    error: false
+                },
+                mounted() {
+                    const url = 'https://mmo-games.p.rapidapi.com/game?id=452';
+                    const options = {
+                        method: 'GET',
+                        headers: {
+                            'X-RapidAPI-Key': '1f34b9a387msh21473033468878bp1a65f0jsn5b5e61d55a99',
+                            'X-RapidAPI-Host': 'mmo-games.p.rapidapi.com'
+                        }
+                    };
+    
+                    fetch(url, options)
+                        .then(response => response.json())
+                        .then(data => {
+                            this.game = data;
+                            this.loading = false;
+                        })
+                        .catch(() => {
+                            this.error = true;
+                            this.loading = false;
+                        });
+                }
+            });
+        </script>
+        
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
